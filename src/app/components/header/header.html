@@ -1,0 +1,42 @@
+<header class="header" [class.scrolled]="isScrolled">
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">MAKOTECH</span>
+            </div>
+
+            <ul class="nav-menu" [class.active]="isMobileMenuOpen">
+                <li class="nav-item">
+                    <a class="nav-link" (click)="scrollTo('home')" [class.active]="activeSection === 'home'">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" (click)="scrollTo('about')" [class.active]="activeSection === 'about'">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" (click)="scrollTo('skills')"
+                        [class.active]="activeSection === 'skills'">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" (click)="scrollTo('project')"
+                        [class.active]="activeSection === 'project'">Projects</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" (click)="scrollTo('certificates')"
+                        [class.active]="activeSection === 'certificates'">Certificates</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" (click)="scrollTo('contact')"
+                        [class.active]="activeSection === 'contact'">Contact</a>
+                </li>
+            </ul>
+
+            <div class="hamburger" [class.active]="isMobileMenuOpen" (click)="toggleMobileMenu()">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+</header>

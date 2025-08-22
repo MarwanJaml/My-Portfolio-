@@ -1,0 +1,252 @@
+// mako.scss - Updated to match HTML structure
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding: 6rem 0 var(--spacing-lg) 0;
+}
+
+.bg-decoration {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+
+    animation: float 20s ease-in-out infinite;
+    z-index: 1;
+}
+
+.hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.text-content {
+    color: white;
+}
+
+.name-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.role-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+}
+
+.highlight {
+    background: linear-gradient(45deg, #00ffff, #ff00ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.role-animation {
+    animation: glow 2s ease-in-out infinite alternate;
+    transition: all 0.5s ease-in-out;
+}
+
+.description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    max-width: 90%;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+}
+
+.social-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #00ffff;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    text-decoration: none;
+
+    &:hover {
+        transform: translateY(-3px);
+        background: rgba(0, 255, 255, 0.2);
+        box-shadow: 0 10px 30px rgba(0, 255, 255, 0.3);
+        color: #ffffff;
+    }
+}
+
+
+
+.image-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-image-container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    position: relative;
+    z-index: 3;
+    border: 3px solid rgba(255, 255, 255, 0.2);
+}
+
+.glow-ring {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #00ffff, #ff00ff);
+    animation: rotate 3s linear infinite;
+    z-index: 1;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        right: 5px;
+        bottom: 5px;
+        background: #0c1445;
+        border-radius: 50%;
+        z-index: 2;
+    }
+}
+
+/* Animations */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-20px) rotate(180deg);
+    }
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+        filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.3));
+    }
+
+    100% {
+        text-shadow: 0 0 30px rgba(255, 0, 255, 0.8);
+        filter: drop-shadow(0 0 20px rgba(255, 0, 255, 0.5));
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .name-title {
+        font-size: 2.5rem;
+    }
+
+    .role-title {
+        font-size: 2rem;
+    }
+
+    .profile-image-container {
+        width: 300px;
+        height: 300px;
+    }
+
+    .description {
+        max-width: 100%;
+        font-size: 1.1rem;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-container {
+        padding: 0 1rem;
+    }
+
+    .name-title {
+        font-size: 2rem;
+    }
+
+    .role-title {
+        font-size: 1.5rem;
+    }
+
+    .profile-image-container {
+        width: 250px;
+        height: 250px;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+
+    .cta-button {
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+    }
+
+    .cta-button:hover {
+        transform: scale(1.05);
+        color: #730ca7;
+
+    }
+}

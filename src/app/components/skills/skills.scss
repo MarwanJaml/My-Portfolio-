@@ -1,0 +1,251 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0c1445 0%, #1a0033 50%, #0d1b2a 100%);
+            color: white;
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .skills-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+
+        .sub-title {
+            text-align: center;
+            font-size: 60px;
+            padding-bottom: 70px;
+        }
+
+        .sub-title span {
+            color: #0ef
+        }
+
+
+        .skills-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .container1 {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .heading1 {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            color: #00ffff;
+            position: relative;
+        }
+
+        .heading1::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(45deg, #00ffff, #ff00ff);
+            border-radius: 2px;
+        }
+
+        /* Technical Skills - Progress Bars */
+        .Technical-bars {
+            margin-top: 1rem;
+        }
+
+        .bar {
+            margin-bottom: 2rem;
+        }
+
+        .bar .info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2px;
+        }
+
+        .bar .info span {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #ffffff;
+        }
+
+        .bar .info .percentage {
+            font-size: 1rem;
+            color: #00ffff;
+            font-weight: 600;
+        }
+
+        .progress-line {
+            width: 100%;
+            height: 5px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .progress-line span {
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: linear-gradient(45deg, #00ffff, #0080ff);
+            border-radius: 10px;
+            animation: progressAnimation 2s ease-in-out forwards;
+            transform: scaleX(0);
+            transform-origin: left;
+        }
+
+        @keyframes progressAnimation {
+            to {
+                transform: scaleX(1);
+            }
+        }
+
+        /* Specific skill percentages */
+        .asp span {
+            width: 85%;
+            animation-delay: 0.2s;
+        }
+
+        .angular span {
+            width: 80%;
+            animation-delay: 0.4s;
+        }
+
+        .pandas span {
+            width: 75%;
+            animation-delay: 0.6s;
+        }
+
+        .power span {
+            width: 90%;
+            animation-delay: 0.8s;
+        }
+
+        .aws span {
+            width: 70%;
+            animation-delay: 1s;
+        }
+
+        .dashboard span {
+            width: 85%;
+            animation-delay: 1.2s;
+        }
+
+        /* Soft Skills - Radial Bars */
+        .soft-skills-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .radial-bars {
+            position: relative;
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 1rem;
+        }
+
+        .radial-bars svg {
+            width: 100%;
+            height: 100%;
+            transform: rotate(-90deg);
+        }
+
+        .radial-bars circle {
+            width: 100%;
+            height: 100%;
+            fill: none;
+            stroke-width: 8;
+            stroke-linecap: round;
+            transform-origin: center;
+        }
+
+        .radial-bars circle.progress-bar {
+            stroke: rgba(255, 255, 255, 0.1);
+        }
+
+        .radial-bars circle.progress {
+            stroke: url(#gradient);
+            stroke-dasharray: 283;
+            stroke-dashoffset: 283;
+            animation: progressCircle 2s ease-in-out forwards;
+        }
+
+        @keyframes progressCircle {
+            to {
+                stroke-dashoffset: var(--progress);
+            }
+        }
+
+        .radial-bars .percentage {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #00ffff;
+        }
+
+        .radial-bars .skill-name {
+            text-align: center;
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+            color: #ffffff;
+            font-weight: 500;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .skills-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .soft-skills-container {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .section-title {
+                font-size: 2.5rem;
+            }
+
+            .heading1 {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .soft-skills-container {
+                grid-template-columns: 1fr;
+            }
+
+            .radial-bars {
+                width: 100px;
+                height: 100px;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }

@@ -1,0 +1,36 @@
+<section class="contact" id="contact">
+
+    <div class="contact-text">
+        <h2>Contact<span> ME</span></h2>
+        <p>If you want me to help you to analysis your data of to create web application for you, write scripts to
+            achieve your tasks faster don't hesitate with contacting me.</p>
+        <div class="contact-list">
+            <li><i class='bxr  bx-send-alt' style='color:#0ffff1'> marwanaljaml11@gmail.com</i></li>
+            <li><i class='bxr  bx-phone' style='color:#0ffff1'> +962792824184</i></li>
+        </div>
+        <!-- Social Links -->
+        <div class="social-links">
+            <a [href]="socialLinks.whatsapp" class="social-icon" target="_blank" rel="noopener">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a [href]="socialLinks.gitHub" class="social-icon" target="_blank" rel="noopener">
+                <i class="fab fa-github"></i>
+            </a>
+            <a [href]="socialLinks.linkedIn" class="social-icon" target="_blank" rel="noopener">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a [href]="socialLinks.instagram" class="social-icon" target="_blank" rel="noopener">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="contact-form">
+        <form (submit)="sendEmail($event)">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="_replyto" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit" class="cta-button">Send</button>
+        </form>
+    </div>
+</section>

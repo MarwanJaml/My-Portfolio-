@@ -1,0 +1,143 @@
+<section>
+
+    <div id="project">
+        <div class="main-text" id="project">
+            <h2 class="sub-title">My<span> Projects</span></h2>
+            <!--div class="portfolio-content">
+                <div class="row">
+                    <img [src]="FS1" alt="Full Stack Project 1">
+                    <div class="layer">
+                        <h5>
+                            Web Application
+                        </h5>
+                        <p>
+                            An Web Application using Asp.Net Core for the backend and Angular for the frontend.the
+                            Application
+                            is a Online Courses Enrolment
+                            have a lot of features like azure services also CRUD operations
+                        </p>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <img [src]="FS2" alt="Full Stack Project 2">
+                    <div class="layer">
+                        <h5>
+                            Web Application
+                        </h5>
+                        <p>
+                            An Web Application using Asp.Net Core for the backend and Angular for the frontend.the
+                            Application
+                            is a Online Courses Enrolment
+                            have a lot of features like azure services also CRUD operations
+                        </p>
+                        <a href="#" class="" style=""> </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <img [src]="DA" alt="Data Analyst Dashboard">
+                    <div class="layer">
+                        <h5>
+                            Dashboard
+                        </h5>
+                        <p>
+                            An Data Analyst Dashboard using Tableau that shows sales trends over time and the
+                            distribution
+                            of categories. it's come after longe phase
+                            of data cleaning and preparation the data using python and excel.
+                        </p>
+                        <a href="#" class="" style=""> </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <img [src]="DA" alt="Data Analyst Dashboard">
+                    <div class="layer">
+                        <h5>
+                            Dashboard
+                        </h5>
+                        <p>
+                            An Data Analyst Dashboard using Tableau that shows sales trends over time and the
+                            distribution
+                            of categories. it's come after longe phase
+                            of data cleaning and preparation the data using python and excel.
+                        </p>
+                        <a href="#" class="" style=""> </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <img [src]="DA" alt="Data Analyst Dashboard">
+                    <div class="layer">
+                        <h5>
+                            Dashboard
+                        </h5>
+                        <p>
+                            An Data Analyst Dashboard using Tableau that shows sales trends over time and the
+                            distribution
+                            of categories. it's come after longe phase
+                            of data cleaning and preparation the data using python and excel.
+                        </p>
+                        <a href="#" class="" style=""> </a>
+                    </div>
+                </div-->
+        </div>
+
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-md-6">
+                    <div *ngFor="let project of projects" class="card bg-dark text-light shadow-lg mb-4">
+                        <h5 class="card-title text-info">{{project.title}}</h5>
+                        <div class="video-container">
+                            <video controls preload="none" poster={{project.image}} onloadstart="hideLoading(this)"
+                                onerror="showError(this)">
+                                <source src={{project.video}} type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="card-body">
+
+                            <p class="card-text">
+                                {{ project.description }}
+                            </p>
+                            <a href={{project.github}} target="_blank" class="btn btn-info btn-sm">View
+                                Code</a>
+                            <a href="https://your-live-demo" target="_blank" class="btn btn-outline-light btn-sm ms-2">
+                                Demo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <a [href]=[moreProjects] class="cta-button" class="btn btn-info btn-sm">More Projects</a>
+
+
+            </div>
+        </div>
+
+
+
+
+        <!--div class="row">
+            <div class="col-md-6">
+                <div class="card bg-dark text-light shadow-lg mb-4">
+                    <video class="card-img-top" controls>
+                        <source src="assets/videos/online_courses_demo.mp4" type="video/mp4">
+                    </video>
+                    <div class="card-body">
+                        <h5 class="card-title text-info">Online Courses Enrollment System</h5>
+                        <p class="card-text">
+                            Fullstack web app with <b>ASP.NET Core</b> (backend + API),
+                            <b>Angular</b> (frontend), <b>SQL Server</b>, and Azure services.
+                            Uses <b>Entra ID</b> for authentication & authorization.
+                        </p>
+                        <a href="https://github.com/your-repo" target="_blank" class="btn btn-info btn-sm">View
+                            Code</a>
+                        <a href="https://your-live-demo" target="_blank" class="btn btn-outline-light btn-sm ms-2">Live
+                            Demo</a>
+                    </div>
+                </div>
+            </div>
+        </div-->
+    </div>
+
+
+
+</section>

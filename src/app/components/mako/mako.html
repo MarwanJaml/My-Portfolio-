@@ -1,0 +1,56 @@
+<app-header></app-header>
+<!-- portfolio.component.html -->
+<section class="hero-section" id="home">
+    <div class="hero-container">
+        <div class="hero-content">
+
+            <!-- Text Content -->
+            <div class="text-content">
+                <h1 class="name-title">
+                    Hi, I'm <span class="highlight">{{ name }}</span>
+                </h1>
+
+                <h2 class="role-title">
+                    And I'm a <span class="highlight role-animation">{{ getCurrentRole() }}</span>
+                </h2>
+
+                <p class="description">
+                    {{ description }}
+                </p>
+
+                <!-- Social Links -->
+                <!--div class="social-links">
+                    <a [href]="socialLinks.whatsapp" class="social-icon" target="_blank" rel="noopener">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a [href]="socialLinks.gitHub" class="social-icon" target="_blank" rel="noopener">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a [href]="socialLinks.linkedIn" class="social-icon" target="_blank" rel="noopener">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a [href]="socialLinks.instagram" class="social-icon" target="_blank" rel="noopener">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div-->
+
+                <!-- CTA Button -->
+                <button class="cta-button" (click)="scrollToSection()">
+                    <i class="fas fa-arrow-down"></i> Contact Me
+                </button>
+            </div>
+
+            <!-- Image Content -->
+            <div class="image-content">
+                <div class="profile-image-container">
+                    <img [src]="profileImage" [alt]="name" class="profile-image">
+                    <div class="glow-ring"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Background Decoration -->
+    <div class="bg-decoration"></div>
+</section>
