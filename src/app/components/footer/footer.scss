@@ -1,0 +1,49 @@
+//footer section 
+.last-text p {
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #0c1445;
+    font-weight: 400;
+    margin-top: 70px;
+}
+
+.top {
+    position: fixed;
+    bottom: 2.1rem;
+    right: 2.1rem;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    text-decoration: none;
+}
+
+.top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.top i {
+    color: #0c1445;
+    background: #730ca7;
+    font-size: 20px;
+    padding: 12px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    box-shadow: 0 4px 15px rgba(115, 12, 167, 0.3);
+}
+
+.top i:hover {
+
+    color: #0c1445;
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 255, 255, 0.4);
+}
