@@ -1,6 +1,9 @@
 <div class="last-text">
     <div></div>
-    <p>Developed with love by Marwan 🦈 | {{time}} </p>
+    <p>Developed with love by Marwan 🦈 | {{ time }} </p>
 </div>
 
-<a href="#" class="top"><i class='bxr  bx-arrow-up' style='color:#0ffff1'></i> </a>
+<!-- Scroll to top button with Angular conditional display -->
+<a href="#" class="top" [class.show]="showScrollButton" (click)="scrollToTop(); $event.preventDefault()">
+    <i class='bx bx-arrow-up' style='color:#0ffff1'></i>
+</a>

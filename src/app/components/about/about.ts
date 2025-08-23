@@ -9,6 +9,6 @@ import { Component } from '@angular/core';
 })
 export class AboutComponent {
   name = 'Marwan Aljaml';
-  logo = 'assets/images/logo.png';
+  logo = 'assets/images/pc_logo2.jpg';
 
 }

@@ -11,6 +11,8 @@ import { Mic } from 'lucide-angular';
 })
 export class CertificatesComponent {
 
+
+  moreCertificates = "https://drive.google.com/drive/folders/11mC8eKDRJWEyekBTF6wuk-A6ZNsz6FZM?usp=sharing";
   certificates = [
     {
       title: "Data Analyst",

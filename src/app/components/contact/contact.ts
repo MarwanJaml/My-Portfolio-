@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './contact.html',
   styleUrl: './contact.scss'
 })
@@ -19,8 +20,8 @@ export class ContactComponent {
   };
 
   formData = {
-    name: '',
-    email: '',
+    from_name: '',
+    from_email: '',
     message: ''
   };
 
@@ -37,8 +38,8 @@ export class ContactComponent {
       .then((result: EmailJSResponseStatus) => {
         console.log('SUCCESS!', result.text);
         alert('Message sent successfully');
-        this.formData.name = '';
-        this.formData.email = '';
+        this.formData.from_name = '';
+        this.formData.from_email = '';
         this.formData.message = '';
       }, (error) => {
         console.error('FAILED...', error.text);

@@ -87,9 +87,9 @@
                     <div *ngFor="let project of projects" class="card bg-dark text-light shadow-lg mb-4">
                         <h5 class="card-title text-info">{{project.title}}</h5>
                         <div class="video-container">
-                            <video controls preload="none" poster={{project.image}} onloadstart="hideLoading(this)"
-                                onerror="showError(this)">
-                                <source src={{project.video}} type="video/mp4">
+                            <video controls preload="none" [poster]="project.image">
+                                <source [src]="project.video" type="video/mp4">
+                                Your browser does not support the video tag.
                             </video>
                         </div>
                         <div class="card-body">

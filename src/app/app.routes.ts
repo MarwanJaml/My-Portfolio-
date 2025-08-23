@@ -8,9 +8,5 @@ import { ProjectsComponent } from './components/projects/projects';
 export const routes: Routes = [
     { path: '', redirectTo: '#home', pathMatch: 'full' },
     { path: '**', redirectTo: '#home' },
-    { path: 'home', component: MakoComponent },
-    { path: 'about', component: AboutComponent },
-    { path: 'skills', component: SkillsComponent },
-    { path: 'projects', component: ProjectsComponent },
-    { path: 'contact', component: ContactComponent },
+
 ];
