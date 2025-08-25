@@ -66,3 +66,16 @@
         transform: translateY(0);
     }
 }
+
+.quote-section {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.highlight-quote {
+    font-weight: bold;
+    font-style: italic;
+    color: #007bff;
+    /* or any color you prefer */
+    font-size: 1.1em;
+}
